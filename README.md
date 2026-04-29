@@ -1,2 +1,3 @@
 # some-info
-just notes
+
+[operating system linux](/os.md)
