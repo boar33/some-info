@@ -73,3 +73,79 @@ TCP/IP Suite layers
 - Layer 3 Transport
 - Layer 2 Internet
 - Layer 1 Link
+
+To connect to physical Cisco device use usb mini-b or rj45 cables
+
+User exec mode
+
+- user exec mode is very limited
+- users can look at some things, but can't make any changed to the configuration
+- also called user mode
+
+something like this:
+```
+Router>
+```
+
+Privileged exec mode
+
+to enable type first command
+```
+Router>enable
+Router#
+```
+
+- provides complete access to view the device's configuration, restart the device, etc.
+- cannot change the configuration, but can change the time on the device, save the configuration file, etc.
+
+In both modes if user will type **?** in cli, it will show all available commands 
+
+for exec mode user will get less commands than for privileged mode
+
+to activate global configuration mode
+
+if currently in user exec mode, type
+```
+router>enable
+router#configure terminal
+router(config)#
+```
+if user sees similar output, it means he is in global configuration mode
+
+running-config / startup-config
+
+- there are two separate configuration files kept on the device at once
+
+Running-config = the current, active configuration file on the device. As you enter commands in the CLI, you edit the active configuration
+
+Startup-config = the configuration file that will be loaded upon restart of the device
+
+command
+```
+show running-config
+```
+displays the current, active configuration file
+
+command
+```
+show startup-config
+```
+displays the saved configuration file which will be loaded if the device is restarted
+
+command
+```
+write
+```
+saves the configuration
+
+command
+```
+write memory
+```
+saves the configuration
+
+command
+```
+copy running-config startup-config
+```
+saves the configuration
