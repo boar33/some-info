@@ -149,3 +149,53 @@ command
 copy running-config startup-config
 ```
 saves the configuration
+
+ARP (Address resolution Protocol)
+
+- ARP is used to discover the Layer2 address (MAC address) of a known Layer3 address (IP address)
+- consists of 2 messages: ARP Request, ARP reply
+- ARP Request is a broadcast = sent to all hosts on the network
+- ARP Reply is unicast = sent only to one host (the host that sent the request)
+- FFFF.FFFF.FFFF = broadcast MAC address
+
+command in operating system terminal
+```
+arp -a
+```
+to view the ARP table.
+
+ARP table columns
+- Internet address = IP address (Layer 3 address)
+- Physical address = MAC address (Layer 2 address)
+- Type static = default entry, dynamic = learned via ARP
+
+Command
+```
+ping argument_IP_address
+```
+it is terminal command
+
+- a network utility that is used to test reachability
+- measures round-trip time
+- uses 2 messages: ICMP Echo Request, ICMP Echo Reply
+
+command
+```
+show mac address-table
+```
+when connected to cisco switch, use the command above to view MAC Address Table
+from current switch
+
+command
+```
+clear mac address-table dynamic
+```
+when connected to cisco switch, the command above will clear MAC addresses with dynamic type
+
+command
+```
+clear mac address-table dynamic address argument_mac_address
+clear mac address-table dynamic interface argument_interface_id
+```
+when connected to cisco switch, the command above will clear mac address table of current switch with specific mac address or interface
+
