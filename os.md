@@ -1,6 +1,9 @@
 # linux
 
-### filesystem hierarchy standard (fhs)
+* [fhs](#section-1-filesystem-hierarchy-standard-fhs)
+* [cli commands](#section-2-cli-commands)
+
+## Section 1: Filesystem Hierarchy Standard (FHS)
 
 - fhs defines linux directory structure and what each folder is commonly used for
 - common directories:
@@ -134,6 +137,8 @@ content of **/etc**
 	- **package management** while some software packages can be installed using the system's package manager, others may require manual installation
 	- **configuration** configuration files for software installed in **/opt** are often located within the software's directory
 	- **cleanup** when removing software installed in **/opt**, it's important to remove all files and directories associated with the software
+
+## Section 2: CLI commands
 
 command
 ```
