@@ -135,3 +135,18 @@ content of **/etc**
 	- **configuration** configuration files for software installed in **/opt** are often located within the software's directory
 	- **cleanup** when removing software installed in **/opt**, it's important to remove all files and directories associated with the software
 
+command
+```
+lspci
+```
+it's utility for displaying information about PCI buses in the system and devices connected to them
+
+command
+```
+lsmod
+```
+shows what kernel modules are currently loaded
+
+linux boot process
+
+bios/uefi -> mbr/gpt -> grub2 -> initrd/kernel -> systemd
